@@ -33,6 +33,22 @@ class Media{
        });
        return upload;
     }
+
+    unLink(folder, filename){
+        const imageName = filename.split('/')[5];
+        const path = folder + `/${imageName}`;
+
+        console.log(path);
+
+        fs.unlink(path, error => {
+            if(error){
+                return 'file deleted';
+            }else{
+                return 'Something went wrong';
+            }
+        });
+    }
+
 }
 
 module.exports = Media;
