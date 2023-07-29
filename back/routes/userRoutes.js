@@ -13,7 +13,11 @@ router.get('/getuserbio', userController.getUserBio);
 router.get('/getusermedia', userController.getUserMedia);
 
 //CREATE
-router.post('/signup', userController.uploadProfilePicture,userController.createAccount);
+router.post(
+    '/signup', 
+    userController.uploadProfilePicture,
+    userController.createAccount
+);
 
 //UPDATE
 router.patch('/updatefirstname', userController.updateFirstName);

@@ -9,7 +9,7 @@ class Media{
         this.image = image;
     }
 
-    uploadProfilePicture(){
+    uploadMedia(){
        const multerStorage = multer.diskStorage({
         destination: (req,res,cb) => {
             cb(null, this.des);

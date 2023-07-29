@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //route paths 
-const userRouter = require('./routes/userRoutes');
 const devRouter = require('./routes/devRoutes');
+const userRouter = require('./routes/userRoutes');
+const postRouter = require('./routes/postRoutes');
 
 //prevent CORS ISSUES 
 app.use((req,res,next) => {
@@ -21,8 +22,9 @@ app.use(express.json({limit: '50mb'}));
 
 
 //main routes 
-app.use('/api/user', userRouter);
 app.use('/api/dev', devRouter);
+app.use('/api/user', userRouter);
+app.use('/api/post', postRouter);
 
 
 //error handling middleware 

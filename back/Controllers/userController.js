@@ -3,7 +3,7 @@ const User = require('../models/userModel');
 const Media = require('../models/mediaModel');
 
 const media = new Media('./public/profile_pictures');
-const upolad = media.uploadProfilePicture();
+const upolad = media.uploadMedia();
 
 
 exports.uploadProfilePicture = upolad.single('image');
