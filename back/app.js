@@ -7,6 +7,8 @@ const app = express();
 const devRouter = require('./routes/devRoutes');
 const userRouter = require('./routes/userRoutes');
 const postRouter = require('./routes/postRoutes');
+const realRouter = require('./routes/realRoutes');
+const likesRouter = require('./routes/likesRoutes');
 
 //prevent CORS ISSUES 
 app.use((req,res,next) => {
@@ -25,6 +27,8 @@ app.use(express.json({limit: '50mb'}));
 app.use('/api/dev', devRouter);
 app.use('/api/user', userRouter);
 app.use('/api/post', postRouter);
+app.use('/api/real', realRouter);
+app.use('/api/likes', likesRouter);
 
 
 //error handling middleware 
