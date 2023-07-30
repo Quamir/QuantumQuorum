@@ -11,6 +11,7 @@ const realRouter = require('./routes/realRoutes');
 const likesRouter = require('./routes/likesRoutes');
 const commentRouter = require('./routes/commentRoutes');
 const repliesRouter = require('./routes/repliesRoutes');
+const friendsRouter = require('./routes/friendsRoutes');
 
 //prevent CORS ISSUES 
 app.use((req,res,next) => {
@@ -33,6 +34,7 @@ app.use('/api/real', realRouter);
 app.use('/api/likes', likesRouter);
 app.use('/api/comment', commentRouter);
 app.use('/api/replies', repliesRouter);
+app.use('/api/friends', friendsRouter);
 
 
 //error handling middleware 
