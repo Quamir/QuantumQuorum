@@ -81,7 +81,6 @@ class Real {
             realIdentifier
         );
         const unlinkPath = mediaLocation.rows[0].media;
-        console.log(unlinkPath);
         const media = new Media();
 
         media.unLink('public/reals', unlinkPath);
